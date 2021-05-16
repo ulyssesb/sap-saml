@@ -30,9 +30,9 @@ In case something goes wrong, this log object can be used to debug the authentic
 
 ```
 import got from 'got'
-import auth, { log } from 'sap-saml'
+import * as saml from 'sap-saml'
 
-const cookies = await auth(url, user, pass)
+const cookies = await saml.auth(url, user, pass)
 
 // Inject cookies and call GET on endpoint to test authentication
 const resp = await got.get(url, { cookieJar: cookies })

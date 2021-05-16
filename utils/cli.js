@@ -3,7 +3,7 @@
 /* eslint-disable import/extensions */
 import got from 'got'
 import yargs from 'yargs'
-import auth, { log } from '../src/auth'
+import * as saml from '../src/auth'
 
 /**
  * YArguments
@@ -41,9 +41,9 @@ const { argv } = yargs.options({
 async function run() {
     try {
         // Authenticate and get cookie jar to be re-use in future calls
-        const cookies = await auth(argv.url, argv.user, argv.pass)
+        const cookies = await saml.auth(argv.url, argv.user, argv.pass)
 
-        if (argv.dbg) console.log(log.stringify())
+        if (argv.dbg) console.log(saml.log.stringify())
 
         // Inject cookies and call GET on endpoint to test authentication
         const resp = await got.get(argv.url, {

@@ -119,5 +119,4 @@ async function auth(spURL, user, pass) {
     return cookieJar
 }
 
-export { logger as log }
-export default auth
+export { auth, logger as log }
