@@ -1,0 +1,28 @@
+{
+    "name": "sap-saml",
+    "version": "1.0.0",
+    "description": "SAP SAML Authentication",
+    "main": "src/auth.js",
+    "type": "module",
+    "dependencies": {
+        "babel-eslint": "^10.1.0",
+        "cheerio": "^1.0.0-rc.3",
+        "got": "^11.6.0",
+        "tough-cookie": "^4.0.0",
+        "yargs": "^15.4.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.2",
+        "eslint-plugin-prettier": "^3.4.0",
+        "prettier": "^2.3.0"
+    },
+    "scripts": {
+        "test": "node --es-module-specifier-resolution=node utils/cli.js "
+    },
+    "bin": "./utils/cli.js",
+    "author": "Ulysses Bonfim",
+    "license": "ISC"
+}
